@@ -58,7 +58,7 @@
         <% end -%>
 
       
-        <span class="icon icon-del"></span>         <%# <%= sprite_icon('del') %> %>
+        <span class="icon icon-del"></span>         
         <% form_id = "delete_id_#{rand(10000)}" -%>
         <%= form_tag({:action => 'delete'}, {:id => form_id}) do%>
           <%= hidden_field_tag :path, log.path %>
