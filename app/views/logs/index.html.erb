@@ -34,7 +34,7 @@
   <% @logs.each do |log| -%>
     <tr class="<%= cycle('odd', 'even')%> ">
       <td style="text-align: left">
-      <span class="icon icon-file"></span>         #  <%= sprite_icon('file') %>
+      <span class="icon icon-file"></span>         
         <% form_id = "show_id_#{rand(10000)}" -%>
         <%= form_tag({:controller => 'logs', :action => 'show'}, {:id => form_id}) do%>
           <%= hidden_field_tag :path, log.path %>
@@ -50,7 +50,7 @@
       </td>
       
       <td>
-        <span class="icon icon-download"></span>            #    <%= sprite_icon('download') %>
+        <span class="icon icon-download"></span>            
         <% form_id = "download_id_#{rand(10000)}" -%>
         <%= form_tag({:action => 'download'}, {:id => form_id}) do%>
           <%= hidden_field_tag :path, log.path %>
